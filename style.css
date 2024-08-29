@@ -1,0 +1,205 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --light-blue: rgb(227 232 240);
+    --blue: rgb(71 146 209);
+    --yellow: rgb(230 180 60);
+    --white: white;
+    font-family: system-ui, sans-serif;
+
+    --icon: rgb(163 163 163);
+}
+
+
+
+
+nav{
+    color: var(--white);
+    background-color: var(--blue);
+    grid-row: 1 / -1;
+
+}
+
+img{
+    max-width: 20px;
+}
+
+.head{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+    padding: 16px 32px;
+    padding-right: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.head ul{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+main{
+    background-color: var(--light-blue);
+}
+
+#hi{
+    display: grid;
+    font-weight: 700;
+    gap: 8px;
+}
+
+#hi-there img{ 
+    max-width: 56px;
+    border: 8px solid var(--icon);
+    background-color:  var(--icon);
+    border-radius: 50%;
+}
+
+#hi span:nth-child(2){
+    font-size: 1.25em;
+}
+
+#hi span:first-child{
+    font-size: 0.75em;
+}
+
+body > .head:first-child {
+    grid-template-columns: 2fr 1fr;
+    padding: 16px ;
+}
+
+body > .head:nth-child(2){
+    grid-template-columns: 1fr 1fr;
+    padding: 16px ;
+
+}
+
+
+#actions{
+    gap: 32px;
+   justify-self: end; 
+}
+
+#hi-there{
+    justify-self: start;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+
+.head:first-child > div{
+    display: grid; 
+    grid-auto-flow: column;
+
+}
+
+#search{
+    justify-content: start;
+    grid-template-columns: auto 80%;
+    gap: 24px;
+    align-items: center;
+}
+
+ #user{
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    gap: 32px;
+}
+
+.container .head:nth-child(2){
+    box-shadow: 2px 3px 3px 0px rgb(214 219 227);
+    z-index: 2;
+    padding-top: 0px;
+    height: calc(min-content + 25px);
+    padding-bottom: 0px;;
+}
+
+button{
+    padding: 8px 24px;
+    background: var(--blue);
+    color: white;
+    border-radius: 25px;
+    border: 1px solid var(--blue);
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 100%;
+}
+
+input{
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 20px;
+    max-height: 28px;
+    height: 30px;
+}
+
+
+#user img:nth-child(2){
+  
+        max-width: 34px;
+        border: 6px solid var(--icon);
+        background-color: var(--icon);
+        border-radius: 20px;
+    
+}
