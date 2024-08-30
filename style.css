@@ -57,51 +57,32 @@ table {
     --blue: rgb(71 146 209);
     --yellow: rgb(230 180 60);
     --white: white;
-    --icon: rgb(254, 197, 197); /*#ffaeae*/
+    --avatar: rgb(254, 197, 197); /*#ffaeae*/
     font-family: system-ui, sans-serif;
 }
 
 nav{
-    color: var(--white);
-    background-color: var(--blue);
     grid-row: 1 / -1;
-
 }
 
-img{
+.icon{
     max-width: 20px;
 }
 
 .head{
-    display: grid;
-    grid-auto-flow: column;
     grid-template-columns: 2fr 1fr;
     padding: 16px 32px;
     padding-right: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-.head ul{
-    display: grid;
-    grid-auto-flow: column;
-}
-
-main{
-    background-color: var(--light-blue);
 }
 
 #hi{
-    display: grid;
-    font-weight: 700;
+    font-weight: bold;
     gap: 6px;
 }
 
 #hi-there img{ 
     max-width: 56px;
-    border: 8px solid var(--icon);
-    background-color:  var(--icon);
-    border-radius: 50%;
+    border-width: 8px;
 }
 
 #hi span:nth-child(2){
@@ -110,14 +91,8 @@ main{
 
 #hi span:first-child{
     font-size: 0.85em;
-    font-weight: bold;
 }
 
-body > .head:first-child {
-    grid-template-columns: 2fr 1fr;
-    padding: 16px ;
-    padding-bottom: 8px; 
-}
 
 
 #actions{
@@ -127,76 +102,86 @@ body > .head:first-child {
 
 #hi-there{
     justify-self: start;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
     gap: 32px;
-    align-items: center;
 }
 
-
-.head:first-child > div{
-    display: grid; 
-    grid-auto-flow: column;
-
-}
 
 #search{
     justify-content: start;
     grid-template-columns: auto 80%;
     gap: 24px;
-    align-items: center;
 }
 
  #user{
-    justify-content: center;
-    align-items: center;
     justify-self: end;
     gap: 32px;
 }
 
+
 .container .head:nth-child(2){
     box-shadow: 2px 3px 3px 0px rgb(214 219 227);
     z-index: 2; 
-    grid-template-columns: 1fr 1fr;
     padding-right: 32px; 
 }
 
 button{
     padding: 8px 24px;
-    background: var(--blue);
-    color: white;
-    border-radius: 25px;
-    border: 1px solid var(--blue);
-    
 }
 
 .container{
-    display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: auto auto 100%;
+    grid-template-rows: repeat(3, auto);
 }
 
 input{
-    background-color: var(--light-blue);
-    border: 1px solid var(--light-blue);
-    border-radius: 20px;
-    max-height: 28px;
-    height: 30px;
+    height: 28px;
 }
 
-
-#user img:nth-child(2){
-  
-        max-width: 34px;
-        border: 6px solid var(--icon);
-        background-color: var(--icon);
-        border-radius: 20px;
-    
+img[alt="cat avatar"]{
+    border-color: var(--avatar);
 }
-
 
 .same-pad{
     margin-bottom: 8px; 
     align-self: end;
+}
+
+.blue{
+    border-color: var(--blue);
+    background-color: var(--blue);
+    color: white;
+}
+
+
+.light-blue{
+    border-color: var(--light-blue);
+    background-color: var(--light-blue);
+}
+
+.circle-border{
+    border-radius: 50%;
+}
+
+.border{
+    border: 0px solid;
+}
+
+.rounded-border{
+    border-radius: 15px / 50%;
+}
+
+.avatar{
+    max-width: 34px;
+    border: 6px solid;
+}
+
+.grid-col-center{
+   display: grid;
+   grid-auto-flow: column; 
+   justify-content: center;
+   align-items: center;
+}
+
+.grid-row{
+    display: grid;
 }
