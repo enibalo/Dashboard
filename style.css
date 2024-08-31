@@ -61,10 +61,8 @@ table {
     font-family: system-ui, sans-serif;
 }
 
-nav{
-    grid-row: 1 / -1;
-}
 
+/*HEADER SECTION*/
 .icon{
     max-width: 20px;
 }
@@ -129,8 +127,8 @@ button{
 }
 
 .container{
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 100%;
 }
 
 input{
@@ -185,3 +183,42 @@ img[alt="cat avatar"]{
 .grid-row{
     display: grid;
 }
+
+
+/*NAVIGATION SECTION*/
+
+nav{
+    grid-row: 1 / -1;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: auto auto auto 100%;
+    gap: 56px;
+    font-size: 1.25em;
+    padding-top: 16px; 
+}
+
+nav div{
+    justify-self: start;
+    align-self: start;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 1.35em;
+}
+
+img[alt="puzzle logo"]{
+    max-width: 32px;
+}
+
+.list{
+    gap: 16px;
+}
+
+nav li.grid-col-center{
+    justify-content: start;
+    gap: 24px;
+}
+
+
+
+
+
