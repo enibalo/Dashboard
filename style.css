@@ -127,8 +127,8 @@ button{
 }
 
 .container{
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 10fr;
 }
 
 input{
@@ -196,6 +196,8 @@ nav{
     gap: 56px;
     font-size: 1.25em;
     padding-top: 16px; 
+    font-weight: bold;
+    padding-left: 32px;
 }
 
 nav div{
@@ -211,7 +213,7 @@ img[alt="puzzle logo"]{
 }
 
 .list{
-    gap: 16px;
+    gap: 32px;
 }
 
 nav li.grid-col-center{
@@ -237,13 +239,10 @@ main{
 
 main section:first-child{
     grid-row: 1/-1;
-    display: flex;
-    flex-direction: column;
 }
 
 
 #projects{
-    flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
@@ -283,3 +282,59 @@ h1{
 h3{
     font-size: 0.9em;
 }
+
+#trending li{
+    display: grid;
+    grid-template-columns: auto 100%;
+    grid-template-rows: 1fr 1fr;
+    min-width: max-content;
+    align-items: center;
+}
+
+
+#trending{
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    justify-content: space-around;
+}
+#trending li img{
+    margin-right: 16px;
+    grid-row: 1 / -1;
+    max-width: 48px;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+main section{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+
+#announcements li {
+    margin: 16px 0px 0px 0px; 
+    padding-bottom: 16px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+#announcements li:nth-child(3){
+    border-width: 0px;
+}
+
+#announcements{
+    display: grid;
+}
+
+.grey{
+    color: grey;
+}
+
